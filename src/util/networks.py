@@ -1,4 +1,7 @@
 import torch
+from tqdm import tqdm
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.cuda.amp import GradScaler
 
 # Define the neural network model
 class SimpleNetwork(torch.nn.Module):
@@ -24,5 +27,5 @@ class SimpleNetwork(torch.nn.Module):
         x = self.fcs(x)
         x = self.fch(x)
         x = self.fce(x)
-        return x    
-
+        return x
+    

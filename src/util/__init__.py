@@ -1,3 +1,3 @@
-from util.data_gen import DHO_setDataset, DHO_combDataset
+from util.data_gen import DHO_Dataset
+from util.helpers import plot_loss, PhysicsInformedNN
 from util.networks import SimpleNetwork
-from util.helpers import CreateTensor, PreprocessData, CustomLoss, NeuralNetworkTrainer
