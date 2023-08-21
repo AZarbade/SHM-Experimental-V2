@@ -18,10 +18,7 @@ def plot_loss(loss_log, val_loss):
     plt.figure(figsize=(10, 2.5))
     plt.plot(loss_log['epoch'], loss_log['loss'], label='Training Loss')
     if val_loss is not None:
-        plt.plot(val_loss['epoch'], val_loss['loss'], label='Validation Loss', color='r', marker='x')
-        # plt.scatter(len(loss_log['epoch']) - 1, val_loss, color='r', marker='x', label='Validation Loss')
-        # plt.plot([len(loss_log['epoch']) - 1, len(loss_log['epoch']) - 1], [0, val_loss], color='r', linestyle='--', alpha=0.5)
-        # plt.plot([0, len(loss_log['epoch']) - 1], [val_loss, val_loss], color='r', linestyle='--', alpha=0.5)
+        plt.plot(val_loss['epoch'], val_loss['loss'], label='Validation Loss', color='r')
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.yscale('log')
